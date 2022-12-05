@@ -10,6 +10,7 @@ Developed by HudsonProgramming
 x_pos = 0
 y_pos = 0
 
+# Variables "last_x_pos" & "last_y_pos" used to store previous x and y coordinates separately.
 last_x_pos = x_pos
 last_y_pos = y_pos
 
