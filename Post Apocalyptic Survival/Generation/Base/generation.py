@@ -38,12 +38,15 @@ militrary_facilities = ["Ammunation Storage", "Weapon Storage","Military Intelli
 ##### SIZE #####
 building_size = ["Small","Medium","Large"]
 
-#x = random.randint(1,3) #Changes the amount of buildings generated.
+# Used to store current counter of how many buildings have been generated
+current_building_counter = 1
 
 while True:
     user_input = int(input("\nEnter number of generated buildings: "))
     for i in range(user_input):
             print("")
+            print("Building Number:",current_building_counter)
+            current_building_counter = current_building_counter + 1
             bc = random.randint(0,100) # Generates building Condition 0% - 100%
             ec = random.randint(0,100) # Generates extra Condition 0% - 100%
             lt = random.choice(land_type) # Generates Land Type
