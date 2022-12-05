@@ -13,10 +13,6 @@ y_pos = 0
 last_x_pos = x_pos
 last_y_pos = y_pos
 
-# Variable "player_pos" used to store both x & y coordinates.
-current_pos = x_pos , y_pos
-last_pos = current_pos
-
 # Creates an infinite loop
 while True:
     
