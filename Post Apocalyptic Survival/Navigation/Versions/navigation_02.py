@@ -1,7 +1,9 @@
+# Libraries
 import pickle
 import os
-os.system("clr")
+os.system("cls")
 
+# Clears everything within Navigation_Coords.txt
 with open("Navigation_Coords.txt", "a+") as f:
     f.truncate(0)
 
@@ -25,11 +27,8 @@ last_y_pos = y_pos
 while True:
 
     coordinates = [x_pos,y_pos]
-    #pickle.dump(coordinates,open("Navigation_Coords.txt","wb"))
-    #with open("Navigation_Coords.txt", "w") as f:
-    #   f.write(str(coordinates))
-    #   f.close()
 
+    # Adds current coordinates to a new line within Navigation_Coords.txt
     with open("Navigation_Coords.txt", "a+") as f:
         f.seek(0)
         data = f.read(100)
@@ -38,12 +37,12 @@ while True:
         f.write(str(coordinates))
     
     print( "---------------------------------------------------------------" )
-    print( "\  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \ " )
+    print( "\  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \ " )
     print( "---------------------------------------------------------------\n" )
     print( "Current coordinates: [",x_pos,"/",y_pos,"]" )
     print( "Last coordinates: [",last_x_pos,"/",last_y_pos,"]" )
     print( "\n---------------------------------------------------------------" )
-    print( "\  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \ " )
+    print( "\  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \  \ " )
     print( "---------------------------------------------------------------\n" )
     print("You can currently travel:\n> North ( N )\n> East ( E )\n> South ( S )\n> West ( W )\n")
 
@@ -55,7 +54,7 @@ while True:
     # IF USER CHOOSES NORTH
     if user_option == "n":
 
-        print("You travel North ( N )")
+        print("You travel North ( N )\n")
 
         # Used to get the last coordinates
         last_x_pos = x_pos
@@ -67,7 +66,7 @@ while True:
     # IF USER CHOOSES EAST   
     elif user_option == "e":
 
-        print("You travel East ( E )")
+        print("You travel East ( E )\n")
 
         # Used to get the last coordinates
         last_x_pos = x_pos
@@ -79,7 +78,7 @@ while True:
     # IF USER CHOOSES SOUTH   
     elif user_option == "s":
 
-        print("You travel South ( S )")
+        print("You travel South ( S )\n")
 
         # Used to get the last coordinates
         last_x_pos = x_pos
@@ -91,7 +90,7 @@ while True:
     # IF USER CHOOSES WEST
     elif user_option == "w":
 
-        print("You travel West ( W )")
+        print("You travel West ( W )\n")
 
         # Used to get the last coordinates
         last_x_pos = x_pos
